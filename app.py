@@ -124,6 +124,7 @@ html, body, [class*="css"] {
 #  PATHS
 # ─────────────────────────────────────────────
 BASE = Path(".")
+
 def p(*args): return BASE.joinpath(*args)
 
 # ─────────────────────────────────────────────
@@ -132,11 +133,20 @@ def p(*args): return BASE.joinpath(*args)
 def show_image(path, caption=None):
     fp = Path(path)
     if fp.exists():
-        st.markdown('<div class="img-card">', unsafe_allow_html=True)
-        st.image(str(fp), use_container_width=True)
-        if caption:
-            st.markdown(f'<div class="img-cap">{caption}</div>', unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
+        try:
+            from PIL import Image as PILImage
+            img = PILImage.open(str(fp))
+            st.markdown('<div class="img-card">', unsafe_allow_html=True)
+            st.image(img, use_container_width=True)
+            if caption:
+                st.markdown(f'<div class="img-cap">{caption}</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+        except Exception:
+            st.markdown('<div class="img-card">', unsafe_allow_html=True)
+            st.image(str(fp), use_container_width=True)
+            if caption:
+                st.markdown(f'<div class="img-cap">{caption}</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
     else:
         st.info(f"Gambar tidak ditemukan: {fp.name}")
 

@@ -123,8 +123,7 @@ html, body, [class*="css"] {
 # ─────────────────────────────────────────────
 #  PATHS
 # ─────────────────────────────────────────────
-BASE = Path("EXPLORE_AH_DataMining_Results")
-
+BASE = Path(".")
 def p(*args): return BASE.joinpath(*args)
 
 # ─────────────────────────────────────────────

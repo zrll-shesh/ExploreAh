@@ -571,7 +571,7 @@ def page_association():
         box(
             "Setiap titik merepresentasikan itemset (kombinasi atribut kejahatan), dan garis "
             "menunjukkan arah aturan asosiasi. Ketebalan garis merepresentasikan nilai "
-            "<strong>lift</strong> — semakin tebal, semakin kuat hubungan kedua itemset tersebut.",
+            "<strong>lift</strong>  semakin tebal, semakin kuat hubungan kedua itemset tersebut.",
             "blue"
         )
 
@@ -623,12 +623,12 @@ def page_association():
                  "<strong>Lift:</strong> Kekuatan asosiasi dibanding kemunculan acak (>1 = positif).")
             card("Kegunaan Operasional",
                  "Strong rules dengan lift tinggi mengindikasikan kombinasi atribut yang "
-                 "sering muncul bersama — informasi ini dapat digunakan untuk "
+                 "sering muncul bersama  informasi ini dapat digunakan untuk "
                  "profiling kejahatan dan antisipasi jenis kejahatan berikutnya di lokasi tertentu.")
         with c2:
             box(
                 "<strong>Contoh Interpretasi:</strong> Jika ditemukan rule dengan confidence tinggi antara "
-                "jenis kejahatan tertentu, waktu malam, dan kawasan tertentu — maka kepolisian dapat "
+                "jenis kejahatan tertentu, waktu malam, dan kawasan tertentu  maka kepolisian dapat "
                 "meningkatkan patroli di area dan waktu tersebut secara proaktif.",
                 "green"
             )
@@ -646,7 +646,7 @@ def page_association():
 def page_classification():
     page_header(
         "Klasifikasi Prediktif",
-        "Prediksi probabilitas penangkapan pelaku (arrest) — F1-Score & ROC-AUC pada data imbalanced"
+        "Prediksi probabilitas penangkapan pelaku (arrest)  F1-Score & ROC-AUC pada data imbalanced"
     )
 
     tabs = st.tabs(["Perbandingan Model", "Confusion Matrix", "Feature Importance", "SHAP & ROC-PR", "Bootstrap CI"])
@@ -684,11 +684,11 @@ def page_classification():
         report = load_csv(p("classification", "classification_report_stacking.csv"))
         if report is not None:
             st.markdown("<br>", unsafe_allow_html=True)
-            section("Classification Report — Stacking Ensemble")
+            section("Classification Report  Stacking Ensemble")
             st.dataframe(report, use_container_width=True)
 
     with tabs[1]:
-        section("Confusion Matrix — Stacking Ensemble")
+        section("Confusion Matrix  Stacking Ensemble")
         show_image(p("classification", "confusion_matrix_stacking.png"),
                    "Gambar 1. Confusion Matrix Model Stacking Ensemble")
         box(
@@ -720,13 +720,13 @@ def page_classification():
         c1, c2 = st.columns(2)
         with c1:
             show_image(p("classification", "shap_summary_plot.png"),
-                       "Gambar 3. SHAP Summary Plot — Interpretasi Model LightGBM")
+                       "Gambar 3. SHAP Summary Plot  Interpretasi Model LightGBM")
         with c2:
             show_image(p("classification", "roc_pr_curves.png"),
                        "Gambar 4. ROC Curve dan Precision-Recall Curve")
         box(
             "<strong>SHAP (SHapley Additive exPlanations)</strong> memberikan interpretabilitas "
-            "pada level prediksi individual — menunjukkan fitur mana yang mendorong prediksi "
+            "pada level prediksi individual  menunjukkan fitur mana yang mendorong prediksi "
             "ke arah arrest atau non-arrest untuk setiap kasus.",
             "blue"
         )
@@ -775,7 +775,7 @@ def page_spatial():
     tabs = st.tabs(["Global Moran's I", "Peta LISA", "Getis-Ord Gi*", "Tabel Hasil"])
 
     with tabs[0]:
-        section("Global Moran's I — Autokorelasi Spasial Global")
+        section("Global Moran's I  Autokorelasi Spasial Global")
         if gmi is not None:
             st.dataframe(gmi, use_container_width=True)
         box(
@@ -797,23 +797,23 @@ def page_spatial():
                  "fokus pada area isolasi.")
 
     with tabs[1]:
-        section("Peta LISA — Local Indicators of Spatial Association")
+        section("Peta LISA  Local Indicators of Spatial Association")
         show_image(p("spatial", "lisa_map.png"),
-                   "Gambar 1. Peta LISA — Identifikasi Cluster Lokal dan Outlier Spasial")
+                   "Gambar 1. Peta LISA  Identifikasi Cluster Lokal dan Outlier Spasial")
         box(
             "Peta LISA mengklasifikasikan tiap wilayah ke dalam 4 kategori: "
-            "<strong>High-High</strong> (hotspot — area kejahatan tinggi dikelilingi area tinggi), "
+            "<strong>High-High</strong> (hotspot  area kejahatan tinggi dikelilingi area tinggi), "
             "<strong>Low-Low</strong> (coldspot), "
             "<strong>High-Low</strong> (outlier positif), dan "
-            "<strong>Low-High</strong> (outlier negatif — area rendah dikelilingi area tinggi, "
+            "<strong>Low-High</strong> (outlier negatif  area rendah dikelilingi area tinggi, "
             "kandidat intervensi komunitas).",
             "warn"
         )
 
     with tabs[2]:
-        section("Getis-Ord Gi* — Hotspot dan Coldspot Analysis")
+        section("Getis-Ord Gi*  Hotspot dan Coldspot Analysis")
         show_image(p("spatial", "hotspot_map_gi_star.png"),
-                   "Gambar 2. Peta Getis-Ord Gi* — Hotspot dan Coldspot Kejahatan")
+                   "Gambar 2. Peta Getis-Ord Gi*  Hotspot dan Coldspot Kejahatan")
         box(
             "<strong>Getis-Ord Gi*</strong> mengidentifikasi area dengan konsentrasi nilai tinggi "
             "(hotspot) atau rendah (coldspot) yang secara statistik signifikan. "
@@ -898,7 +898,7 @@ def page_forecasting():
                  "Tidak memerlukan stasionaritas data.")
         with c2:
             card("SARIMA",
-                 "Seasonal AutoRegressive Integrated Moving Average — model klasik yang kuat "
+                 "Seasonal AutoRegressive Integrated Moving Average  model klasik yang kuat "
                  "untuk data musiman. Memerlukan stasionaritas dan pemilihan parameter (p,d,q)(P,D,Q,s) "
                  "yang cermat melalui ACF/PACF analysis.")
         box(
@@ -937,7 +937,7 @@ def page_forecasting():
 # ══════════════════════════════════════════════
 def page_causal():
     page_header(
-        "Causal Inference — Difference-in-Differences",
+        "Causal Inference  Difference-in-Differences",
         "Mengukur dampak kausal lockdown COVID-19 terhadap volume kejahatan"
     )
 
@@ -946,7 +946,7 @@ def page_causal():
     with tabs[0]:
         section("Uji Parallel Trends Assumption")
         show_image(p("causal_inference", "did_parallel_trends.png"),
-                   "Gambar 1. Visualisasi Parallel Trends — Validasi Asumsi DiD")
+                   "Gambar 1. Visualisasi Parallel Trends  Validasi Asumsi DiD")
         box(
             "Asumsi <strong>parallel trends</strong> adalah syarat utama validitas DiD: "
             "kelompok treatment dan control harus menunjukkan tren yang sejajar sebelum "
@@ -1019,7 +1019,7 @@ def page_survival():
     with tabs[0]:
         section("Kurva Kaplan-Meier")
         show_image(p("survival_analysis", "kaplan_meier_curves.png"),
-                   "Gambar 1. Kaplan-Meier Survival Curves — Estimasi Waktu Hingga Penangkapan")
+                   "Gambar 1. Kaplan-Meier Survival Curves  Estimasi Waktu Hingga Penangkapan")
         box(
             "Kurva Kaplan-Meier mengestimasi fungsi survival (probabilitas kasus belum berakhir "
             "dengan penangkapan) sepanjang waktu. Perbedaan antar kurva dapat diuji signifikansinya "
@@ -1052,7 +1052,7 @@ def page_survival():
         c1, c2 = st.columns(2)
         with c1:
             card("Apa yang Diukur?",
-                 "Survival analysis mengukur 'waktu hingga kejadian' — dalam konteks ini, "
+                 "Survival analysis mengukur 'waktu hingga kejadian'  dalam konteks ini, "
                  "berapa lama hingga sebuah kasus berakhir dengan penangkapan. "
                  "Kasus yang tidak berakhir dengan penangkapan diperlakukan sebagai 'censored'.")
             card("Faktor yang Mempengaruhi",
@@ -1088,7 +1088,7 @@ def page_fairness():
     with tabs[0]:
         section("Fairness Audit Overview")
         show_image(p("fairness_audit", "fairness_audit_visualization.png"),
-                   "Gambar 1. Visualisasi Komprehensif Fairness Audit — Fairlearn")
+                   "Gambar 1. Visualisasi Komprehensif Fairness Audit  Fairlearn")
         box(
             "Fairness audit mengevaluasi apakah model prediktif menghasilkan performa yang setara "
             "antar kelompok demografis. Ketidaksetaraan performa mengindikasikan potensi bias "
@@ -1240,7 +1240,7 @@ def page_about():
         section("Relevansi SDGs")
         st.markdown("""
         <div class="card">
-            <h4>SDG 16 — Peace, Justice and Strong Institutions</h4>
+            <h4>SDG 16  Peace, Justice and Strong Institutions</h4>
             <p>
                 Penelitian ini berkontribusi pada SDG 16 dengan menyediakan
                 landasan berbasis data untuk kebijakan keamanan publik yang lebih

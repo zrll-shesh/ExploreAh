@@ -131,22 +131,23 @@ def p(*args): return BASE.joinpath(*args)
 #  HELPER FUNCTIONS
 # ─────────────────────────────────────────────
 def show_image(path, caption=None):
+    import base64, mimetypes
     fp = Path(path)
     if fp.exists():
         try:
-            from PIL import Image as PILImage
-            img = PILImage.open(str(fp))
-            st.markdown('<div class="img-card">', unsafe_allow_html=True)
-            st.image(img, use_container_width=True)
-            if caption:
-                st.markdown(f'<div class="img-cap">{caption}</div>', unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
-        except Exception:
-            st.markdown('<div class="img-card">', unsafe_allow_html=True)
-            st.image(str(fp), use_container_width=True)
-            if caption:
-                st.markdown(f'<div class="img-cap">{caption}</div>', unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
+            with open(fp, "rb") as f:
+                data = f.read()
+            b64 = base64.b64encode(data).decode()
+            mime = mimetypes.guess_type(str(fp))[0] or "image/png"
+            cap_html = f'<div class="img-cap">{caption}</div>' if caption else ""
+            st.markdown(f"""
+            <div class="img-card">
+                <img src="data:{mime};base64,{b64}"
+                     style="width:100%;border-radius:8px;display:block;">
+                {cap_html}
+            </div>""", unsafe_allow_html=True)
+        except Exception as e:
+            st.warning(f"Gagal memuat gambar {fp.name}: {e}")
     else:
         st.info(f"Gambar tidak ditemukan: {fp.name}")
 
@@ -1062,7 +1063,7 @@ def page_survival():
         c1, c2 = st.columns(2)
         with c1:
             card("Apa yang Diukur?",
-                 "Survival analysis mengukur 'waktu hingga kejadian'  dalam konteks ini, "
+                 "Survival analysis mengukur 'waktu hingga kejadian' dalam konteks ini, "
                  "berapa lama hingga sebuah kasus berakhir dengan penangkapan. "
                  "Kasus yang tidak berakhir dengan penangkapan diperlakukan sebagai 'censored'.")
             card("Faktor yang Mempengaruhi",

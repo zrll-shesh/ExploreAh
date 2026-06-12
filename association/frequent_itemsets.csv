@@ -1,0 +1,86 @@
+support,itemsets,length
+0.540525,frozenset({'crime_PROPERTY'}),1
+0.294705,frozenset({'premis_RESIDENTIAL'}),1
+0.229295,frozenset({'time_Evening'}),1
+0.19542,frozenset({'victim_Young_Adult'}),1
+0.330715,frozenset({'has_weapon'}),1
+0.3251,frozenset({'victim_Adult'}),1
+0.09026,frozenset({'arrested'}),1
+0.40863,frozenset({'premis_OUTDOOR'}),1
+0.287105,frozenset({'weekend'}),1
+0.22583,frozenset({'time_Morning'}),1
+0.26662,frozenset({'time_Afternoon'}),1
+0.24984,frozenset({'crime_VIOLENT'}),1
+0.086625,frozenset({'premis_COMMERCIAL'}),1
+0.278255,frozenset({'time_Night'}),1
+0.10856,frozenset({'crime_VANDALISM'}),1
+0.128235,"frozenset({'crime_PROPERTY', 'premis_RESIDENTIAL'})",2
+0.12553,"frozenset({'victim_Adult', 'premis_RESIDENTIAL'})",2
+0.1176,"frozenset({'premis_RESIDENTIAL', 'has_weapon'})",2
+0.05701,"frozenset({'victim_Adult', 'crime_PROPERTY', 'premis_RESIDENTIAL'})",3
+0.12915,"frozenset({'time_Evening', 'crime_PROPERTY'})",2
+0.05706,"frozenset({'time_Evening', 'premis_RESIDENTIAL'})",2
+0.07281,"frozenset({'time_Evening', 'has_weapon'})",2
+0.071745,"frozenset({'time_Evening', 'victim_Adult'})",2
+0.062595,"frozenset({'weekend', 'time_Evening'})",2
+0.054975,"frozenset({'time_Evening', 'crime_VIOLENT'})",2
+0.1057,"frozenset({'time_Evening', 'premis_OUTDOOR'})",2
+0.05493,"frozenset({'time_Evening', 'crime_VIOLENT', 'has_weapon'})",3
+0.06944,"frozenset({'time_Evening', 'crime_PROPERTY', 'premis_OUTDOOR'})",3
+0.086755,"frozenset({'crime_PROPERTY', 'victim_Young_Adult'})",2
+0.067695,"frozenset({'victim_Young_Adult', 'premis_RESIDENTIAL'})",2
+0.06032,"frozenset({'weekend', 'victim_Young_Adult'})",2
+0.06998,"frozenset({'victim_Young_Adult', 'premis_OUTDOOR'})",2
+0.06264,"frozenset({'time_Night', 'victim_Young_Adult'})",2
+0.086525,"frozenset({'victim_Young_Adult', 'has_weapon'})",2
+0.070095,"frozenset({'crime_VIOLENT', 'victim_Young_Adult'})",2
+0.07003,"frozenset({'crime_VIOLENT', 'victim_Young_Adult', 'has_weapon'})",3
+0.132155,"frozenset({'premis_OUTDOOR', 'has_weapon'})",2
+0.128765,"frozenset({'victim_Adult', 'has_weapon'})",2
+0.112085,"frozenset({'victim_Adult', 'premis_OUTDOOR'})",2
+0.151445,"frozenset({'victim_Adult', 'crime_PROPERTY'})",2
+0.053695,"frozenset({'victim_Adult', 'premis_OUTDOOR', 'has_weapon'})",3
+0.057285,"frozenset({'arrested', 'has_weapon'})",2
+0.2487,"frozenset({'crime_PROPERTY', 'premis_OUTDOOR'})",2
+0.14764,"frozenset({'weekend', 'crime_PROPERTY'})",2
+0.120825,"frozenset({'weekend', 'premis_OUTDOOR'})",2
+0.1031,"frozenset({'weekend', 'has_weapon'})",2
+0.096035,"frozenset({'weekend', 'victim_Adult'})",2
+0.083765,"frozenset({'weekend', 'premis_RESIDENTIAL'})",2
+0.07087,"frozenset({'weekend', 'crime_PROPERTY', 'premis_OUTDOOR'})",3
+0.122495,"frozenset({'time_Morning', 'crime_PROPERTY'})",2
+0.08238,"frozenset({'time_Morning', 'premis_OUTDOOR'})",2
+0.059905,"frozenset({'weekend', 'time_Morning'})",2
+0.07626,"frozenset({'time_Morning', 'victim_Adult'})",2
+0.075485,"frozenset({'time_Morning', 'premis_RESIDENTIAL'})",2
+0.07007,"frozenset({'time_Morning', 'has_weapon'})",2
+0.0512,"frozenset({'time_Morning', 'crime_VIOLENT'})",2
+0.051175,"frozenset({'time_Morning', 'crime_VIOLENT', 'has_weapon'})",3
+0.095975,"frozenset({'time_Afternoon', 'premis_OUTDOOR'})",2
+0.08509,"frozenset({'time_Afternoon', 'has_weapon'})",2
+0.084865,"frozenset({'victim_Adult', 'time_Afternoon'})",2
+0.072905,"frozenset({'weekend', 'time_Afternoon'})",2
+0.14829,"frozenset({'crime_PROPERTY', 'time_Afternoon'})",2
+0.08187,"frozenset({'time_Afternoon', 'premis_RESIDENTIAL'})",2
+0.054635,"frozenset({'crime_PROPERTY', 'time_Afternoon', 'premis_OUTDOOR'})",3
+0.24968,"frozenset({'crime_VIOLENT', 'has_weapon'})",2
+0.1058,"frozenset({'crime_VIOLENT', 'premis_OUTDOOR'})",2
+0.099305,"frozenset({'crime_VIOLENT', 'victim_Adult'})",2
+0.079895,"frozenset({'weekend', 'crime_VIOLENT'})",2
+0.06309,"frozenset({'crime_VIOLENT', 'time_Afternoon'})",2
+0.088595,"frozenset({'crime_VIOLENT', 'premis_RESIDENTIAL'})",2
+0.080575,"frozenset({'crime_VIOLENT', 'time_Night'})",2
+0.105755,"frozenset({'crime_VIOLENT', 'premis_OUTDOOR', 'has_weapon'})",3
+0.09926,"frozenset({'has_weapon', 'crime_VIOLENT', 'victim_Adult'})",3
+0.079835,"frozenset({'weekend', 'crime_VIOLENT', 'has_weapon'})",3
+0.06308,"frozenset({'crime_VIOLENT', 'time_Afternoon', 'has_weapon'})",3
+0.08851,"frozenset({'crime_VIOLENT', 'premis_RESIDENTIAL', 'has_weapon'})",3
+0.080495,"frozenset({'crime_VIOLENT', 'time_Night', 'has_weapon'})",3
+0.056485,"frozenset({'premis_COMMERCIAL', 'crime_PROPERTY'})",2
+0.124575,"frozenset({'time_Night', 'premis_OUTDOOR'})",2
+0.102745,"frozenset({'time_Night', 'has_weapon'})",2
+0.0917,"frozenset({'weekend', 'time_Night'})",2
+0.14059,"frozenset({'time_Night', 'crime_PROPERTY'})",2
+0.09223,"frozenset({'victim_Adult', 'time_Night'})",2
+0.08029,"frozenset({'time_Night', 'premis_RESIDENTIAL'})",2
+0.07514,"frozenset({'time_Night', 'crime_PROPERTY', 'premis_OUTDOOR'})",3

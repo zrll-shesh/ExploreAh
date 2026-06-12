@@ -1,0 +1,49 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            crime_count   R-squared:                       0.797
+Model:                            OLS   Adj. R-squared:                  0.754
+Method:                 Least Squares   F-statistic:                     4213.
+Date:                Fri, 12 Jun 2026   Prob (F-statistic):          1.62e-142
+Time:                        01:36:31   Log-Likelihood:                -697.43
+No. Observations:                 126   AIC:                             1441.
+Df Residuals:                     103   BIC:                             1506.
+Df Model:                          22                                         
+Covariance Type:                  HC1                                         
+==========================================================================================
+                             coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                728.2487     10.325     70.535      0.000     708.013     748.485
+C(area)[T.Central]      -107.3333     60.983     -1.760      0.078    -226.857      12.190
+C(area)[T.Devonshire]    -17.2336     27.402     -0.629      0.529     -70.940      36.472
+C(area)[T.Foothill]      -75.4002     14.588     -5.168      0.000    -103.993     -46.807
+C(area)[T.Harbor]         27.0998     15.291      1.772      0.076      -2.870      57.070
+C(area)[T.Hollenbeck]    -34.7336     14.969     -2.320      0.020     -64.073      -5.395
+C(area)[T.Hollywood]    -280.0000     33.280     -8.413      0.000    -345.228    -214.772
+C(area)[T.Mission]      -369.3333     34.521    -10.699      0.000    -436.994    -301.673
+C(area)[T.N Hollywood]  -242.0000     38.775     -6.241      0.000    -317.997    -166.003
+C(area)[T.Newton]       -249.5000     44.292     -5.633      0.000    -336.310    -162.690
+C(area)[T.Northeast]      51.4331     16.724      3.075      0.002      18.654      84.212
+C(area)[T.Olympic]       108.4331     24.608      4.406      0.000      60.202     156.664
+C(area)[T.Pacific]      -196.3333     35.133     -5.588      0.000    -265.193    -127.474
+C(area)[T.Rampart]        58.4331     14.453      4.043      0.000      30.106      86.761
+C(area)[T.Southeast]    -191.6667     30.849     -6.213      0.000    -252.129    -131.204
+C(area)[T.Southwest]    -154.8333     32.780     -4.723      0.000    -219.081     -90.586
+C(area)[T.Topanga]        25.4331     20.697      1.229      0.219     -15.133      65.999
+C(area)[T.Van Nuys]       62.2664     19.674      3.165      0.002      23.705     100.828
+C(area)[T.West LA]        76.2664     21.614      3.529      0.000      33.904     118.629
+C(area)[T.West Valley]     2.7664     28.131      0.098      0.922     -52.369      57.901
+C(area)[T.Wilshire]     -303.8333     77.156     -3.938      0.000    -455.057    -152.610
+treatment                443.4846     36.065     12.297      0.000     372.798     514.171
+post                     -43.7727     13.935     -3.141      0.002     -71.085     -16.460
+treatment:post           -53.5773     25.371     -2.112      0.035    -103.303      -3.852
+==============================================================================
+Omnibus:                       52.452   Durbin-Watson:                   2.169
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              270.092
+Skew:                           1.314   Prob(JB):                     2.24e-59
+Kurtosis:                       9.673   Cond. No.                     1.16e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+[2] The smallest eigenvalue is 1.88e-30. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

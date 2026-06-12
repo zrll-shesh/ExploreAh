@@ -1,0 +1,3 @@
+Model,MAPE (%),RMSE
+Prophet,50.71,6587.72
+SARIMA,63.53,8166.31

@@ -1,0 +1,4 @@
+Model,F1 (mean +/- std),ROC-AUC (mean +/- std),Accuracy (mean +/- std)
+LightGBM,0.3177 +/- 0.0192,0.8067 +/- 0.0120,0.7319 +/- 0.0195
+Logistic Regression,0.2849 +/- 0.0184,0.7486 +/- 0.0096,0.7168 +/- 0.0260
+Stacking Ensemble,0.0002,0.8219,0.9336

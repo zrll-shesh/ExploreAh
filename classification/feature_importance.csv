@@ -1,0 +1,19 @@
+feature,importance
+dist_to_cbd_km,1524
+crime_cat_encoded,1037
+AREA,1023
+Vict Age,958
+report_delay_days,865
+premis_cat_encoded,758
+n_mocodes,703
+hour_cos,319
+vict_sex_encoded,313
+n_crime_codes,302
+hour_sin,273
+month_cos,214
+weapon_present,193
+month_sin,187
+dow_sin,129
+dow_cos,103
+time_of_day_encoded,82
+is_weekend,17
